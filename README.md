@@ -10,6 +10,12 @@ This project is a **proof of concept (POC)** built using **Spring Boot** and **J
 - **Stream creation** from collections (e.g. `List<String>`)
 - **Intermediate operations**:
   - `map()` – Transform elements
+    ```
+List<String> upper = names.stream()
+    .map(String::toUpperCase)
+    .toList();
+
+    ```
   - `filter()` – Filter elements based on conditions
 - **Terminal operations**:
   - `collect()` – Gather elements into a collection
