@@ -109,3 +109,40 @@ cd java-streams-playground
 ```
 
 
+## 📖 References and Documentation
+
+Here are some helpful references to learn more about Java Streams and their integration with Spring Boot:
+
+1. **Java Stream API Official Documentation (Oracle)**  
+The official documentation for Java Streams in **Java 21**.  
+[Java Streams - Oracle Documentation](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/stream/package-summary.html)
+
+2. **Java Streams Tutorial - Oracle**  
+A step-by-step tutorial to get started with Java Streams in Java 21.  
+[Java Streams Tutorial - Oracle](https://docs.oracle.com/en/java/javase/21/tutorial/collections/streams/index.html)
+
+3. **Java Streams Guide - Baeldung**  
+A detailed guide and examples for using Java Streams with various operations.  
+[Java Streams Guide - Baeldung](https://www.baeldung.com/java-8-streams)
+
+4. **springdoc-openapi Documentation**  
+Documentation for **springdoc-openapi**, which helps generate Swagger UI for Spring applications.  
+[springdoc-openapi Documentation](https://springdoc.org/)
+
+5. **Java Streams - Stack Overflow**  
+A community-driven Q&A site with solutions and examples for common Java Streams issues.  
+[Java Streams - Stack Overflow](https://stackoverflow.com/questions/tagged/java-stream)
+
+6. **Java Streams Examples - GitHub**  
+Explore GitHub repositories with example projects and code related to Java Streams.  
+[Java Streams Examples - GitHub](https://github.com/search?q=java+streams&type=repositories)
+
+7. **Java 8 Stream API Documentation (Oracle)**  
+Documentation for Java 8 Streams, which serves as the foundation for later versions like Java 21.  
+[Java 8 Stream API Documentation](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)
+
+---
+
+Feel free to explore the provided resources and deepen your understanding of Java Streams in this Spring Boot project!
+
+
