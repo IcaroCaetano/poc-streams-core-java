@@ -61,10 +61,10 @@ A Predicate takes a single argument and returns true or false. Commonly used in 
 📌 Example:
 
 ```java
-Predicate<String> startsWithA = s -> s.startsWith("A");
-List<String> names = List.of("Ana", "Bruno", "Alice");
-names.stream().filter(startsWithA).forEach(System.out::println);
-// Output: Ana, Alice
+Predicate<String> startsWithL = s -> s.startsWith("L");
+List<String> names = List.of("Liam", "Oliver", "Emma", "Lucas");
+names.stream().filter(startsWithL).forEach(System.out::println);
+// Output: Liam, Lucas
 
 ```
 
@@ -87,9 +87,9 @@ A Consumer accepts a single input and performs an operation, without returning a
 
 ```java
 Consumer<String> printUpper = s -> System.out.println(s.toUpperCase());
-List<String> names = List.of("joão", "maria");
+List<String> names = List.of("james", "john");
 names.forEach(printUpper);
-// Output: JOÃO, MARIA
+// Output: JAMES, JOHN
 
 ```
 
