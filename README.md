@@ -10,23 +10,114 @@ This project is a **proof of concept (POC)** built using **Spring Boot** and **J
 - **Stream creation** from collections (e.g. `List<String>`)
 - **Intermediate operations**:
   - `map()` – Transform elements
-    ```
-List<String> upper = names.stream()
-    .map(String::toUpperCase)
-    .toList();
 
-    ```
+📌 Example:
+  
+ ```java
+  List<String> upper = names.stream()
+    .map(String::toUpperCase)
+    .toList();	
+ ```
+  
   - `filter()` – Filter elements based on conditions
+  
+  📌 Example:
+  
+ ```java
+  List<String> startsWithA = names.stream()
+    .filter(name -> name.startsWith("A"))
+    .toList(); 
+ ```
+  
 - **Terminal operations**:
+
+Used to produce a result or side-effect. These operations trigger the execution of the stream pipeline.
+
   - `collect()` – Gather elements into a collection
+  
+  📌 Example:
+  
+```java
+  List<String> collected = names.stream()
+    .filter(n -> n.length() > 3)
+    .collect(Collectors.toList());
+ ```
+  
   - `reduce()` – Aggregate elements
+  
+  📌 Example:
+  
+```java
+  int totalLength = names.stream()
+    .map(String::length)
+    .reduce(0, Integer::sum);
+```
 
 ### ✅ Functional Interfaces
+
 - `Predicate<T>` – Filter elements by condition
+A Predicate takes a single argument and returns true or false. Commonly used in .filter().
+
+📌 Example:
+
+```java
+Predicate<String> startsWithA = s -> s.startsWith("A");
+List<String> names = List.of("Ana", "Bruno", "Alice");
+names.stream().filter(startsWithA).forEach(System.out::println);
+// Output: Ana, Alice
+
+```
+
 - `Supplier<T>` – Lazily generate values (e.g. UUID)
+A Supplier returns a value without any input. Often used to generate new values.
+
+📌 Example:
+
+```java
+Supplier<String> uuidSupplier = () -> UUID.randomUUID().toString();
+System.out.println(uuidSupplier.get());
+// Output: something like "c2a83d90-6b4e-4b9e-93a0-65bd229df53d"
+
+```
+
 - `Consumer<T>` – Apply an action to each element
+A Consumer accepts a single input and performs an operation, without returning anything.
+
+📌 Example:
+
+```java
+Consumer<String> printUpper = s -> System.out.println(s.toUpperCase());
+List<String> names = List.of("joão", "maria");
+names.forEach(printUpper);
+// Output: JOÃO, MARIA
+
+```
+
 - `UnaryOperator<T>` – Modify a single input (e.g. double a number)
+A UnaryOperator modifies a value and returns the result of the same type.
+
+📌 Example:
+
+```java
+UnaryOperator<Integer> doubleIt = x -> x * 2;
+System.out.println(doubleIt.apply(5)); 
+// Output: 10
+
+```
+
 - `BinaryOperator<T>` – Combine two inputs (e.g. sum list)
+A BinaryOperator combines two values of the same type into one.
+
+📌 Example:
+
+```java
+BinaryOperator<Integer> sum = (a, b) -> a + b;
+List<Integer> numbers = List.of(1, 2, 3);
+int result = numbers.stream().reduce(0, sum);
+System.out.println(result);
+// Output: 6
+
+```
 
 ---
 
