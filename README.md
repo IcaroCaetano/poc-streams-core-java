@@ -192,7 +192,7 @@ curl -X POST http://localhost:8080/streams/binary -H "Content-Type: application/
 
 ```
 git clone https://github.com/IcaroCaetano/poc-streams-core-java.git
-cd java-streams-playground
+cd poc-streams-core-java
 
 ```
 
